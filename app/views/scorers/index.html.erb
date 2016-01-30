@@ -1,0 +1,43 @@
+<h1>Listing scorers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Employee name</th>
+      <th>Employee</th>
+      <th>Mgr rating</th>
+      <th>Coworker rating</th>
+      <th>Client rating</th>
+      <th>Delay percentage</th>
+      <th>Score</th>
+      <th>Rank</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scorers.each do |scorer| %>
+      <tr>
+        <td><%= scorer.employee_name %></td>
+        <td><%= scorer.employee_id %></td>
+        <td><%= scorer.mgr_rating %></td>
+        <td><%= scorer.coworker_rating %></td>
+        <td><%= scorer.client_rating %></td>
+        <td><%= scorer.delay_percentage %></td>
+        <td><%= scorer.score %></td>
+        <td><%= scorer.rank %></td>
+        <td><%= link_to 'Show', scorer %></td>
+        <td><%= link_to 'Edit', edit_scorer_path(scorer) %></td>
+        <td><%= link_to 'Destroy', scorer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scorer', new_scorer_path %>
+<br>
+<br>
+
+<button type="submit" value="Submit">Calculate score!</button>

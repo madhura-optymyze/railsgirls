@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee name:</strong>
+  <%= @scorer.employee_name %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @scorer.employee_id %>
+</p>
+
+<p>
+  <strong>Mgr rating:</strong>
+  <%= @scorer.mgr_rating %>
+</p>
+
+<p>
+  <strong>Coworker rating:</strong>
+  <%= @scorer.coworker_rating %>
+</p>
+
+<p>
+  <strong>Client rating:</strong>
+  <%= @scorer.client_rating %>
+</p>
+
+<p>
+  <strong>Delay percentage:</strong>
+  <%= @scorer.delay_percentage %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @scorer.score %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @scorer.rank %>
+</p>
+
+<%= link_to 'Edit', edit_scorer_path(@scorer) %> |
+<%= link_to 'Back', scorers_path %>

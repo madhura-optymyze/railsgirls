@@ -1,0 +1,41 @@
+<%= form_for(@scorer) do |f| %>
+  <% if @scorer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scorer.errors.count, "error") %> prohibited this scorer from being saved:</h2>
+
+      <ul>
+      <% @scorer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :employee_name %><br>
+    <%= f.text_field :employee_name %>
+  </div>
+  <div class="field">
+    <%= f.label :employee_id %><br>
+    <%= f.number_field :employee_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mgr_rating %><br>
+    <%= f.text_field :mgr_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :coworker_rating %><br>
+    <%= f.text_field :coworker_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :client_rating %><br>
+    <%= f.text_field :client_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :delay_percentage %><br>
+    <%= f.text_field :delay_percentage %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
