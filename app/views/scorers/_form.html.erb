@@ -13,8 +13,11 @@
 
   <div class="field">
     <%= f.label :employee_name %><br>
+    <% if action_name=="new" %>
     <%= f.select :employee_name, ['Sneha', 'Pradnya', 'Madhura', 'Leena', 'Arohi'].sort %>
-
+    <%else %>
+    <%=  @scorer.employee_name%>
+    <%end%>
   </div>
   <div class="field">
     Employee id<br>
