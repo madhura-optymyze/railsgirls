@@ -14,13 +14,14 @@
   <div class="field">
     <%= f.label :employee_name %><br>
     <%= f.select :employee_name, ['Sneha', 'Pradnya', 'Madhura', 'Leena', 'Arohi'].sort %>
+
   </div>
   <div class="field">
     Employee id<br>
     <%= f.number_field :employee_id %>
   </div>
   <div class="field">
-    <%= f.label :mgr_rating %><br>
+    Manager Rating<br>
     <%= f.text_field :mgr_rating %>
   </div>
   <div class="field">
