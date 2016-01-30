@@ -61,17 +61,17 @@ class ScorersController < ApplicationController
     end
   end
 
-def calculate_score
-    Scorer.all.each do |scorer|
-      :score=:mgr_rating*30+:coworker_rating*20+:client_rating*20+:delay_percentage*-1*30
-    end
-    Scorer.order(':score DESC, employee_id')
-    int count=1;
-    Scorer.all.each do |scorer|
-      :rank=count
-      count++
-    end
-end
+# def calculate_score
+#     Scorer.all.each do |scorer|
+#       :score=:mgr_rating*30+:coworker_rating*20+:client_rating*20+:delay_percentage*-1*30
+#     end
+#     Scorer.order(':score DESC, employee_id')
+#     int count=1;
+#     Scorer.all.each do |scorer|
+#       :rank=count
+#       count++
+#     end
+# end
 
   private
     # Use callbacks to share common setup or constraints between actions.
