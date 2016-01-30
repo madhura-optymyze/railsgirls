@@ -19,6 +19,7 @@ class ScorersController < ApplicationController
 
   # GET /scorers/1/edit
   def edit
+
   end
 
   # POST /scorers
